@@ -1,0 +1,92 @@
+@font-face {
+    font-family: signwood;
+    src: url(assets/Signwood-Regular.ttf);
+}
+
+:root {
+    --background-opacity: 0.65;
+    --title-font-size: clamp(20px, 3.5vw, 75px);
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-container,
+.form-container {
+    height: 100vh;
+}
+
+.image-container {
+    width: 33.33%;
+    background-image: url("assets/krystal-ng-1PlVbeOCd78-unsplash.jpg");
+    background-size: cover;
+}
+
+.title {
+    height: min(150px, 30%);
+    position: relative;
+    top: 25%;
+    background-color: rgba(0,0,0,var(--background-opacity));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+
+    & span {
+        color: white;
+        font-weight: bold;
+        font-size: var(--title-font-size);
+        font-family: Helvetica, sans-serif;
+        letter-spacing: 5px;
+    }
+}
+
+.form-container {
+    width: 66.66%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    width: 100%;
+}
+
+form section {
+    padding-left: clamp(10px, 3vw, 30px);
+    width: 100%;
+}
+
+.form-header {
+    font-size: 2em;
+    margin: 0px;
+}
+
+.form-body {
+    box-shadow: 0px 5px 10px rgb(185, 185, 185);
+    margin: 2vh 0px;
+}
+
+.form-row {
+    display: flex;
+    gap: 5vw;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-footer {
+
+}
