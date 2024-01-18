@@ -1,11 +1,25 @@
 @font-face {
-    font-family: signwood;
-    src: url(assets/Signwood-Regular.ttf);
+    font-family: mechanical;
+    src: url(assets/Mechanical.ttf);
+}
+
+@font-face {
+    font-family: gellisto;
+    src: url(assets/Gellisto.ttf);
 }
 
 :root {
     --background-opacity: 0.65;
     --title-font-size: clamp(20px, 3.5vw, 75px);
+    --form-left-padding: clamp(10px, 3vw, 30px);
+
+    /* Colours */
+    --light-grey: #393e44;
+    --dark-grey: #242529;
+    --form-body-colour: #eae098;
+    --drop-shadow-colour: #17181b;
+    --light-text: #ded4d5;
+    --button-colour: #897c5a;
 }
 
 body {
@@ -21,34 +35,34 @@ body {
 
 .image-container {
     width: 33.33%;
-    background-image: url("assets/krystal-ng-1PlVbeOCd78-unsplash.jpg");
+    background-image: url("assets/20221201_204447.jpg");
     background-size: cover;
 }
 
 .title {
     height: min(150px, 30%);
-    position: relative;
-    top: 25%;
     background-color: rgba(0,0,0,var(--background-opacity));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5%;
 
     & span {
         color: white;
         font-weight: bold;
         font-size: var(--title-font-size);
-        font-family: Helvetica, sans-serif;
+        font-family: mechanical;
         letter-spacing: 5px;
+        text-align: center;
     }
 }
 
 .form-container {
     width: 66.66%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--dark-grey);
     display: flex;
     align-items: center;
+    font-family: gellisto;
+    color: #ded4d5;
 }
 
 form {
@@ -59,25 +73,35 @@ form {
     width: 100%;
 }
 
-form section {
-    padding-left: clamp(10px, 3vw, 30px);
-    width: 100%;
-}
-
 .form-header {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0px;
+
+    & h1 {
+        letter-spacing: 2px;
+        padding-right: 5vw;
+        padding-left: var(--form-left-padding);
+    }
 }
 
 .form-body {
-    box-shadow: 0px 5px 10px rgb(185, 185, 185);
+    box-shadow: 0px 7px 10px var(--drop-shadow-colour);
     margin: 2vh 0px;
+    background-color: var(--form-body-colour);
+    color: black;
+    width: 100%;
+    padding-bottom: 30px;
+
+    & h2 {
+        padding-left: var(--form-left-padding);
+    }
 }
 
 .form-row {
     display: flex;
-    gap: 5vw;
+    gap: 4vw;
     margin-bottom: 20px;
+    padding-left: var(--form-left-padding);
 }
 
 .input-container {
@@ -87,6 +111,42 @@ form section {
     flex-direction: column;
 }
 
-.form-footer {
-
+input {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
 }
+
+input:invalid {
+    border: 2px solid red;
+}
+
+.error-msg {
+    color: red;
+}
+
+.form-footer {
+    padding-left: var(--form-left-padding);
+    letter-spacing: 2px;
+
+    & p {
+        font-size: 15px;
+    }
+
+    & a {
+        color: white;
+    }
+}
+
+.submit-btn {
+    padding: 5px;
+    width: 220px;
+    height: 40px;
+    background-color: var(--button-colour);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+

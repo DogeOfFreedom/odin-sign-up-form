@@ -5,55 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="image-container">
         <div class="title">
-            <span>Chevron Trust</span>
+            <span>Svarog Heavy Industries</span>
         </div>
     </div>
     <div class="form-container">
         <form action="" method="post">
             <section class="form-header">
-                <h1>You're the last one left, complete the mission</h1>
+                <h1>
+                    The Greatest Mechanical Engineer Dorks on the Cloud Server, Living on the Bleeding Edge of Tomorrow
+                </h1>
             </section>
             <section class="form-body">
-                <h2>Let's do this</h2>
+                <h2>Upload yourself now!</h2>
                 <div class="form-row">
                     <div class="input-container">
                         <label for="first_name">FIRST NAME</label>
-                        <input id="first_name" name="first_name" type="text">
+                        <input id="first_name" name="first_name" type="text" pattern="^[a-zA-Z]+$ " required>
                     </div>
                     <div class="input-container">
                         <label for="last_name">LAST NAME</label>
-                        <input id="last_name" name="last_name" type="text">
+                        <input id="last_name" name="last_name" type="text" pattern="^[a-zA-Z]+$ " required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="input-container">
                         <label for="email">EMAIL</label>
-                        <input id="email" name="email" type="email">
+                        <input id="email" name="email" type="email" required>
                     </div>
                     <div class="input-container">
                         <label for="phone_number">PHONE NUMBER</label>
-                        <input id="phone_number" name="phone_number" type="number">
+                        <input id="phone_number" name="phone_number" type="number" required>
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row bottom-row">
                     <div class="input-container">
                         <label for="password">PASSWORD</label>
-                        <input id="password" name="password" type="password">
+                        <input id="password" name="password" type="password" required>
+                        <span class="error-msg" id="password_error_msg"></span>
                     </div>
                     <div class="input-container">
                         <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input id="confirm_password" name="confirm_password" type="password">
+                        <input id="confirm_password" name="confirm_password" type="password" required>
                     </div>
                 </div>
             </section>
             <section class="form-footer">
-                <button type="submit">Create Account</button>
+                <button class="submit-btn" type="submit">Upload your being</button>
                 <p>
-                    Already have an accocunt? <a href="">Log in</a>
+                    Already have an account? <a href="">Log in</a>
                 </p>
             </section>
         </form>
